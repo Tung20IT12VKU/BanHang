@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">LoginFirebase</string>
+    <string name="action_home">Home</string>
+    <string name="action_Danhmuc">Danh mục</string>
+    <string name="action_toi">Tôi</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
