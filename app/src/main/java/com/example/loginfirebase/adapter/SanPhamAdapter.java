@@ -7,6 +7,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -51,8 +52,8 @@ public class SanPhamAdapter extends RecyclerView.Adapter<SanPhamAdapter.SanPhamV
         }
         holder.textView.setText(sanPham.getTenSanpham());
         Glide.with(context).load(sanPham.getImageSanpham()).into(holder.imageView);
-        holder.textViewGia.setText(sanPham.getGiaSanpham()+"Đ");
-        holder.constraintLayout.setOnClickListener(new View.OnClickListener() {
+        holder.textViewGia.setText(sanPham.getGiaSanpham()+"00Đ");
+        holder.linearLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 itemSanPhamListener.onClickItemSanPham(sanPham);
@@ -68,13 +69,13 @@ public class SanPhamAdapter extends RecyclerView.Adapter<SanPhamAdapter.SanPhamV
     public class SanPhamViewHolder extends RecyclerView.ViewHolder{
         private ImageView imageView;
         private TextView textView, textViewGia;
-        private ConstraintLayout constraintLayout;
+        private LinearLayout linearLayout;
         public SanPhamViewHolder(@NonNull View itemView) {
             super(itemView);
             imageView = itemView.findViewById(R.id.image_sanpham);
             textView = itemView.findViewById(R.id.tv_sanpham);
             textViewGia = itemView.findViewById(R.id.gia_sanpham);
-            constraintLayout = itemView.findViewById(R.id.item_chitietSp);
+            linearLayout = itemView.findViewById(R.id.item_chitietSp);
         }
     }
 }

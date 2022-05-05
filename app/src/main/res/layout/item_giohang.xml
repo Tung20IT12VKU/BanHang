@@ -3,8 +3,16 @@
     android:layout_width="match_parent"
     android:layout_height="200dp"
     xmlns:app="http://schemas.android.com/apk/res-auto">
-    <RadioButton
-        android:id="@+id/radio_giohang"
+<!--    <RadioButton-->
+<!--        android:id="@+id/radio_giohang"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+<!--        android:layout_marginTop="40dp"-->
+<!--        app:layout_constraintLeft_toLeftOf="parent"-->
+<!--        android:layout_marginLeft="10dp"/>-->
+    <CheckBox
+        android:id="@+id/checkbox_giohang"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toTopOf="parent"
@@ -14,11 +22,11 @@
     <ImageView
         android:id="@+id/image_sp_giohang"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="80dp"
         android:src="@mipmap/ic_launcher"
         app:layout_constraintTop_toTopOf="parent"
         android:layout_marginTop="20dp"
-        app:layout_constraintLeft_toRightOf="@+id/radio_giohang"/>
+        app:layout_constraintLeft_toRightOf="@+id/checkbox_giohang"/>
     <TextView
         android:id="@+id/tv_loaiSp_goihang"
         android:layout_width="wrap_content"
