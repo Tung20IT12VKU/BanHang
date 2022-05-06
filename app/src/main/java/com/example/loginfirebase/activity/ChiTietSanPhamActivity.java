@@ -76,6 +76,7 @@ public class ChiTietSanPhamActivity extends AppCompatActivity {
             public void onClick(View view) {
                 DatabaseReference mDatabase = FirebaseDatabase.getInstance().getReference("GioHang");
                 String gioHang = mDatabase.push().getKey();
+                sanPham.setKey(gioHang);
                 mDatabase.child(gioHang).setValue(sanPham);
                 Toast.makeText(ChiTietSanPhamActivity.this, "Thêm giỏ hàng thành công", Toast.LENGTH_SHORT).show();
             }

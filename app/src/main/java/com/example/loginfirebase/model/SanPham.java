@@ -7,6 +7,7 @@ public class SanPham implements Serializable {
     private String imageSanpham;
     private String tenSanpham;
     private float giaSanpham;
+    private static String key;
 
     public SanPham() {
     }
@@ -48,5 +49,13 @@ public class SanPham implements Serializable {
 
     public void setGiaSanpham(float giaSanpham) {
         this.giaSanpham = giaSanpham;
+    }
+
+    public String getKey() {
+        return key;
+    }
+
+    public void setKey(String key) {
+        this.key = key;
     }
 }
