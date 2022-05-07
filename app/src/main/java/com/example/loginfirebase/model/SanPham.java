@@ -7,7 +7,7 @@ public class SanPham implements Serializable {
     private String imageSanpham;
     private String tenSanpham;
     private float giaSanpham;
-    private static String key;
+    private String key;
 
     public SanPham() {
     }

@@ -1,14 +1,24 @@
 package com.example.loginfirebase.fragment;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.DividerItemDecoration;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
 import com.example.loginfirebase.R;
+import com.example.loginfirebase.activity.DanhGiaActivity;
+import com.example.loginfirebase.activity.HoSoActivity;
+import com.example.loginfirebase.adapter.ToiAdapter;
+import com.example.loginfirebase.model.Toi;
+
+import java.util.ArrayList;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -25,6 +35,8 @@ public class ToiFragment extends Fragment {
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
+    private RecyclerView recyclerView_toi;
+    ArrayList<Toi> arrayList;
 
     public ToiFragment() {
         // Required empty public constructor
@@ -61,6 +73,34 @@ public class ToiFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_toi, container, false);
+        View view = inflater.inflate(R.layout.fragment_toi, container, false);
+        recyclerView_toi = view.findViewById(R.id.rcv_toi);
+        arrayList = new ArrayList<>();
+        arrayList.add(new Toi(1,R.drawable.ic_person,"Hồ Sơ của tôi"));
+        arrayList.add(new Toi(2,R.drawable.ic_contact_page,"Địa chỉ"));
+        arrayList.add(new Toi(3,R.drawable.ic_star,"Đánh giá của tôi"));
+        LinearLayoutManager layoutManager = new LinearLayoutManager(getContext(),
+                LinearLayoutManager.VERTICAL, false);
+        recyclerView_toi.setLayoutManager(layoutManager);
+        DividerItemDecoration dividerItemDecoration = new DividerItemDecoration(getContext(), layoutManager.getOrientation());
+        recyclerView_toi.addItemDecoration(dividerItemDecoration);
+        ToiAdapter adapter = new ToiAdapter(arrayList, getContext(), toi -> ClickItemToi(toi));
+        recyclerView_toi.setAdapter(adapter);
+        return view;
+    }
+    private void ClickItemToi(Toi toi) {
+        switch (toi.getId())
+        {
+            case 1:
+                Intent intent = new Intent(getContext(), HoSoActivity.class);
+                startActivity(intent);
+                break;
+            case 2:
+                break;
+            case 3:
+                Intent intent1 = new Intent(getContext(), DanhGiaActivity.class);
+                startActivity(intent1);
+                break;
+        }
     }
 }

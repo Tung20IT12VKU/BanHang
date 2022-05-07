@@ -79,6 +79,9 @@ public class ChiTietSanPhamActivity extends AppCompatActivity {
                 sanPham.setKey(gioHang);
                 mDatabase.child(gioHang).setValue(sanPham);
                 Toast.makeText(ChiTietSanPhamActivity.this, "Thêm giỏ hàng thành công", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(ChiTietSanPhamActivity.this, GioHangActivity.class);
+                startActivity(intent);
+                finish();
             }
         });
 

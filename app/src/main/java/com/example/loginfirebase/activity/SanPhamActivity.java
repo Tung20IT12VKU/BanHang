@@ -73,7 +73,7 @@ public class SanPhamActivity extends AppCompatActivity {
     }
 
     private void GetSanPham(String tenSp) {
-        sanPhamArrayList.clear();
+//        sanPhamArrayList.clear();
         FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();
         DatabaseReference databaseReference = firebaseDatabase.getReference();
         databaseReference.child("SanPham").child(tenSp).addValueEventListener(new ValueEventListener() {

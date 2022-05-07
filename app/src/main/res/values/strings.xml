@@ -3,6 +3,14 @@
     <string name="action_home">Home</string>
     <string name="action_Danhmuc">Danh mục</string>
     <string name="action_toi">Tôi</string>
+    <string name="Hello">Hello</string>
+    <string name="donHang">Đơn hàng</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="themGioHang">Thêm vào giỏ hàng</string>
+    <string name="mua_ngay">Mua ngay</string>
+    <string name="_1">1</string>
+    <string name="_32_000_39_000">đ32.000-đ39.000</string>
+    <string name="tenSp">Áo nam thời thượng phù hợp với mọi lứa tuỏi</string>
+    <string name="ho_so_cua_toi">Hồ sơ của tôi</string>
 </resources>

@@ -1,6 +1,7 @@
 package com.example.loginfirebase.activity;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -9,6 +10,7 @@ import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -98,7 +100,6 @@ public class GioHangActivity extends AppCompatActivity {
     }
 
     private void ClickLongItemGioHang(SanPham sanPham) {
-//
         AlertDialog.Builder dialog = new AlertDialog.Builder(this);
         dialog.setTitle("Xác nhận");
         dialog.setMessage("Bạn có muốn xóa sản phẩm khỏi giỏ hàng không?");

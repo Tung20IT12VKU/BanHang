@@ -3,6 +3,7 @@ package com.example.loginfirebase.model;
 public class Users {
     private int id;
     private String hoten;
+    private String hinhanh;
     private String idtaikhoan;
     private String ngaysinh;
     private String diachi;
@@ -10,9 +11,10 @@ public class Users {
     public Users() {
     }
 
-    public Users(int id, String hoten, String idtaikhoan, String ngaysinh, String diachi) {
+    public Users(int id, String hoten, String hinhanh, String idtaikhoan, String ngaysinh, String diachi) {
         this.id = id;
         this.hoten = hoten;
+        this.hinhanh = hinhanh;
         this.idtaikhoan = idtaikhoan;
         this.ngaysinh = ngaysinh;
         this.diachi = diachi;
